@@ -1,0 +1,67 @@
+name: Configure Infra
+on:
+  workflow_dispatch:
+jobs:
+  deploy:
+    name: 'Configure Infrastructure'
+    runs-on: ubuntu-latest
+
+    permissions:
+      id-token: write
+      contents: read
+      
+    env:
+      # GitHub auth with Terraform cloud used in "provider.tf" # Address is app.terraform.io becomes app_terraform.io. (must be prefixed with "TF_TOKEN_")
+      # Syncs states if local execution is used, also used for Azure authentication if remote execution is used
+      TF_TOKEN_app_terraform_io: ${{ secrets.TF_TOKEN_app_terraform_io }}
+
+      # Create a federated identity for GitHub through Azure service principal
+      # Required for local execution and OIDC (ARM_SECRET_ID if no OIDC)
+      ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+      ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+      ARM_USE_OIDC: true
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      - name: Azure Login (OIDC)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Terraform Init
+        run: terraform init
+
+      - name: Terraform Validate
+        run: terraform validate
+
+      - name: Terraform apply
+        run: terraform apply -auto-approve -var="location=eastus" -var="environment=dev1"
+
+      - name: Cluster authenticate
+        run: az aks get-credentials --resource-group RG_main_eastus_dev1 --name AKS_cluster --overwrite-existing
+
+      - name: Make Script Executable
+        run: chmod +x deploy-apps.sh
+
+      - name: Run deploy apps Script
+        run: bash deploy-apps.sh
+
+      - name: Make Script Executable
+        run: chmod +x update-dns.sh
+
+      - name: Run dns updater Script
+        run: bash update-dns.sh
+
+      - name: Make Script Executable
+        run: chmod +x update-ingress.sh
+
+      - name: Run ingress updater Script
+        run: bash update-ingress.sh

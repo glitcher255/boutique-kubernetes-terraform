@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: boutique
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`boutique.glitcher.ddnsfree.com`)
+      kind: Rule
+      services:
+        - name: frontend
+          port: 80
+  # tls:
+  #   certResolver: letsencrypt

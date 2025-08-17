@@ -1,0 +1,11 @@
+config: |
+  loki.write "default" {
+    endpoint {
+      url = "http://loki.monitoring.svc.cluster.local:3100/loki/api/v1/push"
+    }
+  }
+
+  kubernetes.pod_logs "default" {
+    forward_to = [loki.write.default.receiver]
+    namespaces  = []
+  }

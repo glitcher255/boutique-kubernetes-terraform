@@ -1,0 +1,54 @@
+# tempo:
+#   config:
+#     receivers:
+#       otlp:
+#         protocols:
+#           grpc:
+#             endpoint: "0.0.0.0:4317"
+#           http:
+#             endpoint: "0.0.0.0:4318"
+
+#   storage:
+#     trace:
+#       backend: local
+#       local:
+#         path: /var/tempo/traces
+
+# metrics_generator:
+#   enabled: true
+#   storage:
+#     path: /var/tempo/generator-wal
+#   processor:
+#     serviceGraph:
+#       enabled: true
+#     spanMetrics:
+#       enabled: true
+
+# service:
+#   type: ClusterIP
+#   ports:
+#     - name: http
+#       port: 3200
+#       targetPort: 3200
+#     - name: otlp-grpc
+#       port: 4317
+#       targetPort: 4317
+#     - name: otlp-http
+#       port: 4318
+#       targetPort: 4318
+
+#   readinessProbe:
+#     httpGet:
+#       path: /ready
+#       port: http
+#     initialDelaySeconds: 10
+#     periodSeconds: 10
+#     timeoutSeconds: 5
+
+#   livenessProbe:
+#     httpGet:
+#       path: /ready
+#       port: http
+#     initialDelaySeconds: 10
+#     periodSeconds: 10
+#     timeoutSeconds: 5

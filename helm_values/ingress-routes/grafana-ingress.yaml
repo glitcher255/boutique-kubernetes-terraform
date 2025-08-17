@@ -1,0 +1,17 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: grafana
+  namespace: monitoring
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+    - match: Host(`glitcher.ddnsfree.com`)
+      kind: Rule
+      services:
+        - name: monitoring-grafana
+          port: 80
+  # tls:
+  #   certResolver: letsencrypt

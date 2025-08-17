@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/139.0.0.0 Safari/537.36" version="28.1.0">
+  <diagram name="Page-1" id="uCBkty5MqZFzrAoNDpn7">
+    <mxGraphModel dx="1426" dy="791" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-32" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry y="50" width="850" height="840" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-2" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;v_network / subnet_1&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="10" y="190" width="820" height="570" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-15" value="&lt;font style=&quot;font-size: 15px;&quot;&gt;AKS Cluster&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=bottom;" parent="1" vertex="1">
+          <mxGeometry x="110" y="230" width="700" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jRoAqjSZfPrgPQAokYa2-3" target="GQ5zP5UjF9c9E7-ywrJd-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-13" value="Traefik IP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GQ5zP5UjF9c9E7-ywrJd-12">
+          <mxGeometry x="-0.1091" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-3" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Terraform&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="10" y="710" width="820" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-4" target="jRoAqjSZfPrgPQAokYa2-10" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-4" target="jRoAqjSZfPrgPQAokYa2-13" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-4" value="&lt;font style=&quot;font-size: 13px;&quot;&gt;Traefik ingress controller&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="315" y="250" width="290" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-5" target="jRoAqjSZfPrgPQAokYa2-4" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-5" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="445" y="70" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-10" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Google Boutique (Front-end)&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;https://boutique.glitcher.ddnsfree.com&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="580" y="380" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-13" target="jRoAqjSZfPrgPQAokYa2-26" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-13" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;Grafana&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 13px;&quot;&gt;https://glitcher.ddnsfree.com&lt;/span&gt;&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="120" y="390" width="215" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-17" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;NSG&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;nsg_rule_1&lt;/font&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="20" y="230" width="80" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="jRoAqjSZfPrgPQAokYa2-18" target="GQ5zP5UjF9c9E7-ywrJd-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-7" value="DNS Token" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GQ5zP5UjF9c9E7-ywrJd-5">
+          <mxGeometry x="0.1704" y="1" relative="1" as="geometry">
+            <mxPoint x="8" y="-1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="jRoAqjSZfPrgPQAokYa2-18" target="jRoAqjSZfPrgPQAokYa2-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-17" value="Login creds" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GQ5zP5UjF9c9E7-ywrJd-15">
+          <mxGeometry x="0.6779" relative="1" as="geometry">
+            <mxPoint x="124" y="155" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-18" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Azure key vault&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="550" y="780" width="80" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-26" target="jRoAqjSZfPrgPQAokYa2-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-26" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Prometheus&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="167.5" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="jRoAqjSZfPrgPQAokYa2-27" target="jRoAqjSZfPrgPQAokYa2-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-27" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Loki&lt;br&gt;(K8s logs)&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="167.5" y="600" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="jRoAqjSZfPrgPQAokYa2-30" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;MiniO&lt;/font&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" parent="1" vertex="1">
+          <mxGeometry x="315" y="585" width="70" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-1" value="Dynu DNS&lt;div&gt;&lt;div style=&quot;color: rgb(212, 212, 212); background-color: rgb(30, 30, 30); font-family: Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 14px; line-height: 19px; white-space: pre;&quot;&gt;&lt;span style=&quot;color: #ce9178;&quot;&gt;api.dynu.com&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="795" width="170" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GQ5zP5UjF9c9E7-ywrJd-4" target="GQ5zP5UjF9c9E7-ywrJd-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-11" value="Traefik public IP" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GQ5zP5UjF9c9E7-ywrJd-10">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GQ5zP5UjF9c9E7-ywrJd-4" value="DNS updater CLI" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="375" y="810" width="90" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
